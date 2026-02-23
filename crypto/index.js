@@ -130,14 +130,14 @@ export const generateSignature = async (key, authMessage) => {
 };
 
 /**
- * @param {Uint8Array} clientKey
- * @param {Uint8Array} clientSignature
+ * @param {Uint8Array} left
+ * @param {Uint8Array} right
  */
-export const generateClientProof = (clientKey, clientSignature) => {
-  if (clientKey.length !== clientSignature.length)
-    throw new Error("invalid key length");
+export const xorUint8Arrays = (left, right) => {
+  if (left.length !== right.length)
+    throw new Error("invalid array length");
 
-  return clientKey.map((curr, i) => {
-    return curr ^ clientSignature[i];
+  return left.map((curr, i) => {
+    return curr ^ right[i];
   });
 };
