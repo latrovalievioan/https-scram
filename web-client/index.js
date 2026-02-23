@@ -21,9 +21,15 @@ const register = async() => {
         salt
     }
 
-    console.log(registerParams)
+    const registerOutcome = await fetch("http://localhost:3000/register", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(registerParams)
+    })
 
-    //TODO: fetch post with registerParams
+    console.log(registerOutcome)
 }
 
 registerButton.onclick = register
