@@ -11,7 +11,7 @@ export const generateSalt = () => {
   return generateRandomBase64String(24);
 };
 
-const generateNonce = () => {
+export const generateNonce = () => {
   return generateRandomBase64String(24);
 };
 
@@ -70,7 +70,7 @@ export const generateClientKey = async (saltedPassword) => {
 export const generateStoredKey = async (clientKey) => {
   const storedKey = await globalThis.crypto.subtle.digest(
     "SHA-256",
-    Buffer.from(clientKey),
+    clientKey,
   );
 
   return new Uint8Array(storedKey);

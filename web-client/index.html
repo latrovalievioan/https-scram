@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script type="module" src="index.js"></script>
+  </head>
+  <body
+    style="
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+    "
+    }
+  >
+    <h1>HTTPS SCRAM</h1>
+    <h2>Registration form</h2>
+    <form id="registration-form">
+      <label for="reg-email">Email:</label><br />
+      <input type="text" id="reg-email" name="email" required /><br />
+      <label for="reg-password">Password:</label><br />
+      <input type="password" id="reg-password" name="password" required /><br />
+      <input type="button" value="Register" id="register-btn">
+    </form>
+    <h2>Authentication form</h2>
+    <form id="auth-form">
+      <label for="auth-email">Email:</label><br />
+      <input type="text" id="auth-email" name="email" required /><br />
+      <label for="auth-password">Password:</label><br />
+      <input type="password" id="auth-password" name="password" required /><br />
+      <input type="button" value="Authenticate" onclick="msg()">
+    </form>
+  </body>
+</html>
