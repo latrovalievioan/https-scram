@@ -8,7 +8,7 @@ import {
     generateSignature,
     generateStoredKey,
     xorUint8Arrays,
-} from "../crypto/index.js";
+} from "@scram/crypto";
 
 const ITERATIONS_COUNT = 100_000;
 

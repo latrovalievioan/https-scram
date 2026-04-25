@@ -1,3 +1,7 @@
 {
-    "type": "module"
+    "type": "module",
+    "workspaces": ["crypto", "web-client", "web-server"],
+    "scripts": {
+        "start": "docker compose up"
+    }
 }

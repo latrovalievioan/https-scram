@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  root: '.',
+  root: './src',
   server: {
     fs: {
-      allow: ['../crypto', '../web-client']  // allows serving files from the parent directory
-    }
+      allow: ['../crypto', '.']  // allows serving files from the parent directory
+    },
+    host: '0.0.0.0',
+    port: 5173,
   }
 })

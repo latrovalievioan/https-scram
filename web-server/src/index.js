@@ -4,7 +4,7 @@ import {
     generateSignature,
     generateStoredKey,
     xorUint8Arrays,
-} from "../crypto/index.js";
+} from "@scram/crypto";
 import express, { json } from "express";
 
 const app = express();
